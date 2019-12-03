@@ -19,10 +19,10 @@ val dir2 = input2.split(",").map(_.trim()).toList.map(e=>repeatChar(e)).mkString
 def process(dir:String, current:point, marks:List[point]):List[point]={
     dir.take(1) match{
         case "" => marks
-        case "R" => process(dir.drop(1), new point(current.x +1, current.y), new point(current.x +1, current.y)::marks )
-        case "L" => process(dir.drop(1), new point(current.x -1, current.y), new point(current.x -1, current.y)::marks )
-        case "U" => process(dir.drop(1), new point(current.x, current.y+1), new point(current.x, current.y+1)::marks )
-        case "D" => process(dir.drop(1), new point(current.x, current.y-1), new point(current.x, current.y-1)::marks )
+        case "R" => process(dir.drop(1), new point(current.x +1, current.y, current.delay+1), new point(current.x +1, current.y, current.delay)::marks )
+        case "L" => process(dir.drop(1), new point(current.x -1, current.y, current.delay+1), new point(current.x -1, current.y, current.delay)::marks)
+        case "U" => process(dir.drop(1), new point(current.x, current.y+1, current.delay+1), new point(current.x, current.y+1, current.delay)::marks )
+        case "D" => process(dir.drop(1), new point(current.x, current.y-1, current.delay+1), new point(current.x, current.y-1, current.delay)::marks )
     }
 }
 
@@ -30,9 +30,20 @@ def manhattan(p:point):Int={
     p.x.abs + p.y.abs
 }
 
-val marks1 = process(dir1, new point(0,0), List(point(0,0))).toSet 
-val marks2 = process(dir2, new point(0,0), List(point(0,0))).toSet
+val marks1 = process(dir1, new point(0,0,1), List(point(0,0))).toSet 
+val marks2 = process(dir2, new point(0,0,1), List(point(0,0))).toSet
 
-marks1.intersect(marks2).filter(manhattan(_)>0).minBy(e=>manhattan(e))
+val temp = marks1.map(e=>(e.x,e.y)).intersect(marks2.map(f=>(f.x,f.y)))
+
+val test1 = for {p<-marks1 ; q <- temp if p.x==q._1 && p.y ==q._2} yield p
+val test2 = for {p<-marks2 ; q <- temp if p.x==q._1 && p.y ==q._2} yield p
+
+
+val inter = (for { p<-test1;q<-test2 
+    if(p.x==q.x && p.y==q.y)} yield p.delay + q.delay).filter(t => t>0).min
+
+
+
+//marks1.map(e=>(e.x,e.y)).intersect(marks2.map(f=>(f.x,f.y))).filter(manhattan(_)>0).minBy(e=>manhattan(e))
 }
 

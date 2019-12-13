@@ -1,0 +1,70 @@
+[0m[[0m[0mdebug[0m] [0m[0m[0m
+[0m[[0m[0mdebug[0m] [0m[0mInitial source changes: [0m
+[0m[[0m[0mdebug[0m] [0m[0m	removed:Set()[0m
+[0m[[0m[0mdebug[0m] [0m[0m	added: Set(/home/marc/AoC2019/scala_day2/day2/src/main/scala/day12.scala, /home/marc/AoC2019/scala_day2/day2/src/main/scala/day13.scala)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	modified: Set(/home/marc/AoC2019/scala_day2/day2/src/main/scala/day10.scala, /home/marc/AoC2019/scala_day2/day2/src/main/scala/day5.scala, /home/marc/AoC2019/scala_day2/day2/src/main/scala/day8.scala)[0m
+[0m[[0m[0mdebug[0m] [0m[0mInvalidated products: Set()[0m
+[0m[[0m[0mdebug[0m] [0m[0mExternal API changes: API Changes: Set()[0m
+[0m[[0m[0mdebug[0m] [0m[0mModified binary dependencies: Set()[0m
+[0m[[0m[0mdebug[0m] [0m[0mInitial directly invalidated classes: Set(day10, day5, day8)[0m
+[0m[[0m[0mdebug[0m] [0m[0m[0m
+[0m[[0m[0mdebug[0m] [0m[0mSources indirectly invalidated by:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	product: Set()[0m
+[0m[[0m[0mdebug[0m] [0m[0m	binary dep: Set()[0m
+[0m[[0m[0mdebug[0m] [0m[0m	external source: Set()[0m
+[0m[[0m[0mdebug[0m] [0m[0mAll initially invalidated classes: Set(day10, day5, day8)[0m
+[0m[[0m[0mdebug[0m] [0m[0mAll initially invalidated sources:Set(/home/marc/AoC2019/scala_day2/day2/src/main/scala/day13.scala, /home/marc/AoC2019/scala_day2/day2/src/main/scala/day10.scala, /home/marc/AoC2019/scala_day2/day2/src/main/scala/day5.scala, /home/marc/AoC2019/scala_day2/day2/src/main/scala/day12.scala, /home/marc/AoC2019/scala_day2/day2/src/main/scala/day8.scala)[0m
+[0m[[0m[0mdebug[0m] [0m[0mInitial set of included nodes: day10, day5, day8[0m
+[0m[[0m[0minfo[0m] [0m[0mCompiling 5 Scala sources to /home/marc/AoC2019/scala_day2/day2/target/scala-2.13/classes ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mGetting org.scala-sbt:compiler-bridge_2.13:1.3.0:compile for Scala 2.13.1[0m
+[0m[[0m[0mdebug[0m] [0m[0mGetting org.scala-sbt:compiler-bridge_2.13:1.3.0:compile for Scala 2.13.1[0m
+[0m[[0m[0mdebug[0m] [0m[0m[zinc] Running cached compiler 2aa297b2 for Scala compiler version 2.13.1[0m
+[0m[[0m[0mdebug[0m] [0m[0m[zinc] The Scala compiler is invoked with:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	-bootclasspath[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/resources.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/sunrsasign.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/jsse.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/jce.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/charsets.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/jfr.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/classes:/home/marc/snap/code/common/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-library/2.13.1/scala-library-2.13.1.jar[0m
+[0m[[0m[0mdebug[0m] [0m[0m	-classpath[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/home/marc/AoC2019/scala_day2/day2/target/scala-2.13/classes:/home/marc/snap/code/common/.cache/coursier/v1/https/repo1.maven.org/maven2/org/typelevel/cats-kernel_2.13/2.0.0/cats-kernel_2.13-2.0.0.jar:/home/marc/snap/code/common/.cache/coursier/v1/https/repo1.maven.org/maven2/org/typelevel/cats-macros_2.13/2.0.0/cats-macros_2.13-2.0.0.jar:/home/marc/snap/code/common/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scala-graph/graph-core_2.13/1.13.1/graph-core_2.13-1.13.1.jar:/home/marc/snap/code/common/.cache/coursier/v1/https/repo1.maven.org/maven2/org/typelevel/cats-core_2.13/2.0.0/cats-core_2.13-2.0.0.jar[0m
+[0m[[0m[0mdebug[0m] [0m[0mScala compilation took 13.805686814 s[0m
+[0m[[0m[0mdebug[0m] [0m[0mDone compiling.[0m
+[0m[[0m[0mdebug[0m] [0m[0mInvalidating (transitively) by inheritance from day12.moon...[0m
+[0m[[0m[0mdebug[0m] [0m[0mInitial set of included nodes: day12.moon[0m
+[0m[[0m[0mdebug[0m] [0m[0mInvalidated by transitive inheritance dependency: Set(day12.moon)[0m
+[0m[[0m[0mdebug[0m] [0m[0mChange NamesChange(day12.moon,ModifiedNames(changes = UsedName(toyTup,[Default]), UsedName(toTup,[Default]), UsedName(toxTup,[Default]), UsedName(tozTup,[Default]))) invalidates 1 classes due to The day12.moon has the following regular definitions changed:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	UsedName(toyTup,[Default]), UsedName(toTup,[Default]), UsedName(toxTup,[Default]), UsedName(tozTup,[Default]).[0m
+[0m[[0m[0mdebug[0m] [0m[0m	> by transitive inheritance: Set(day12.moon)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	> [0m
+[0m[[0m[0mdebug[0m] [0m[0m	> [0m
+[0m[[0m[0mdebug[0m] [0m[0m        [0m
+[0m[[0m[0mdebug[0m] [0m[0mInvalidating (transitively) by inheritance from day13...[0m
+[0m[[0m[0mdebug[0m] [0m[0mInitial set of included nodes: day13[0m
+[0m[[0m[0mdebug[0m] [0m[0mInvalidated by transitive inheritance dependency: Set(day13)[0m
+[0m[[0m[0mdebug[0m] [0m[0mChange NamesChange(day13,ModifiedNames(changes = UsedName(==,[Default]), UsedName(isInstanceOf,[Default]), UsedName(hashCode,[Default]), UsedName(eq,[Default]), UsedName(wait,[Default]), UsedName(clone,[Default]), UsedName(##,[Default]), UsedName(equals,[Default]), UsedName(notifyAll,[Default]), UsedName($isInstanceOf,[Default]), UsedName($asInstanceOf,[Default]), UsedName(asInstanceOf,[Default]), UsedName(ne,[Default]), UsedName(toString,[Default]), UsedName(!=,[Default]), UsedName(notify,[Default]), UsedName(finalize,[Default]), UsedName(synchronized,[Default]), UsedName(day13,[Default]), UsedName(getClass,[Default]))) invalidates 1 classes due to The day13 has the following regular definitions changed:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	UsedName(==,[Default]), UsedName(isInstanceOf,[Default]), UsedName(hashCode,[Default]), UsedName(eq,[Default]), UsedName(wait,[Default]), UsedName(clone,[Default]), UsedName(##,[Default]), UsedName(equals,[Default]), UsedName(notifyAll,[Default]), UsedName($isInstanceOf,[Default]), UsedName($asInstanceOf,[Default]), UsedName(asInstanceOf,[Default]), UsedName(ne,[Default]), UsedName(toString,[Default]), UsedName(!=,[Default]), UsedName(notify,[Default]), UsedName(finalize,[Default]), UsedName(synchronized,[Default]), UsedName(day13,[Default]), UsedName(getClass,[Default]).[0m
+[0m[[0m[0mdebug[0m] [0m[0m	> by transitive inheritance: Set(day13)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	> [0m
+[0m[[0m[0mdebug[0m] [0m[0m	> [0m
+[0m[[0m[0mdebug[0m] [0m[0m        [0m
+[0m[[0m[0mdebug[0m] [0m[0mInvalidating (transitively) by inheritance from day12...[0m
+[0m[[0m[0mdebug[0m] [0m[0mInitial set of included nodes: day12[0m
+[0m[[0m[0mdebug[0m] [0m[0mInvalidated by transitive inheritance dependency: Set(day12)[0m
+[0m[[0m[0mdebug[0m] [0m[0mChange NamesChange(day12,ModifiedNames(changes = UsedName(r3,[Default]), UsedName(cont3,[Default]), UsedName(smallMoons,[Default]), UsedName(r1,[Default]), UsedName(history3,[Default]), UsedName(cont,[Default]), UsedName(history2,[Default]), UsedName(r4,[Default]), UsedName(cont2,[Default]), UsedName(history1,[Default]), UsedName(temp3,[Default]), UsedName(temp,[Default]), UsedName(temp2,[Default]), UsedName(r2,[Default]))) invalidates 1 classes due to The day12 has the following regular definitions changed:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	UsedName(r3,[Default]), UsedName(cont3,[Default]), UsedName(smallMoons,[Default]), UsedName(r1,[Default]), UsedName(history3,[Default]), UsedName(cont,[Default]), UsedName(history2,[Default]), UsedName(r4,[Default]), UsedName(cont2,[Default]), UsedName(history1,[Default]), UsedName(temp3,[Default]), UsedName(temp,[Default]), UsedName(temp2,[Default]), UsedName(r2,[Default]).[0m
+[0m[[0m[0mdebug[0m] [0m[0m	> by transitive inheritance: Set(day12)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	> [0m
+[0m[[0m[0mdebug[0m] [0m[0m	> [0m
+[0m[[0m[0mdebug[0m] [0m[0m        [0m
+[0m[[0m[0mdebug[0m] [0m[0mInvalidating (transitively) by inheritance from day5...[0m
+[0m[[0m[0mdebug[0m] [0m[0mInitial set of included nodes: day5[0m
+[0m[[0m[0mdebug[0m] [0m[0mInvalidated by transitive inheritance dependency: Set(day5)[0m
+[0m[[0m[0mdebug[0m] [0m[0mChange NamesChange(day5,ModifiedNames(changes = UsedName(two,[Default]), UsedName(three,[Default]), UsedName(parser,[Default]), UsedName(one,[Default]), UsedName(four,[Default]))) invalidates 1 classes due to The day5 has the following regular definitions changed:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	UsedName(two,[Default]), UsedName(three,[Default]), UsedName(parser,[Default]), UsedName(one,[Default]), UsedName(four,[Default]).[0m
+[0m[[0m[0mdebug[0m] [0m[0m	> by transitive inheritance: Set(day5)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	> [0m
+[0m[[0m[0mdebug[0m] [0m[0m	> [0m
+[0m[[0m[0mdebug[0m] [0m[0m        [0m
+[0m[[0m[0mdebug[0m] [0m[0mNew invalidations:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Set()[0m
+[0m[[0m[0mdebug[0m] [0m[0mInitial set of included nodes: [0m
+[0m[[0m[0mdebug[0m] [0m[0mPreviously invalidated, but (transitively) depend on new invalidations:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Set()[0m
+[0m[[0m[0mdebug[0m] [0m[0mNo classes were invalidated.[0m

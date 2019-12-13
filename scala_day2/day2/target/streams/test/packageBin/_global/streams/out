@@ -1,0 +1,11 @@
+[0m[[0m[0mdebug[0m] [0m[0mPackaging /home/marc/AoC2019/scala_day2/day2/target/scala-2.13/hello-world_2.13-1.0-tests.jar ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mInput file mappings:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/marc/AoC2019/scala_day2/day2/target/scala-2.13/test-classes[0m
+[0m[[0m[0mdebug[0m] [0m[0m	amm$delayedInit$body.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/marc/AoC2019/scala_day2/day2/target/scala-2.13/test-classes/amm$delayedInit$body.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	amm.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/marc/AoC2019/scala_day2/day2/target/scala-2.13/test-classes/amm.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	amm$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/marc/AoC2019/scala_day2/day2/target/scala-2.13/test-classes/amm$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0mDone packaging.[0m

@@ -1,0 +1,4 @@
+[debug] [day1-test] Classpath dependencies List()
+[debug] [day1-test] Dependencies from configurations List(day1)
+[debug] Bloop wrote the configuration of project 'day1-test' to '/home/marc/AoC2019/scala_day1/day1/.bloop/day1-test.json'
+[success] Generated .bloop/day1-test.json

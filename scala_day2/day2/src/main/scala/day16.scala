@@ -1,0 +1,24 @@
+object day16 {
+  val smallRaw = "12341234"
+  val baseRaw = "0, 1, 0, -1"
+  val smallInput = smallRaw.toList.map(_.asDigit)
+  val base = baseRaw.split(",").map(_.trim()).toList.map(_.toInt)
+  val raw =
+    "59709275180991144553584971145772909665510077889137728108418335914621187722143499835763391833539113913245874471724316543318206687063884235599476032241946131415288903315838365933464260961288979081653450180693829228376307468452214424448363604272171578101049695177870848804768766855959460302410160410252817677019061157656381257631671141130695064999297225192441065878259341014746742840736304437968599872885714729499069286593698777113907879332554209736653679474028316464493192062972874319626623316763537266681767610340623614648701699868901159785995894014509520642548386447251984766543776759949169049134947575625384064448900019906754502662096668908517457172"
+  val input = raw.toList.map(_.asDigit)
+  val largeInput = List.fill(10000)(input).flatten
+  def oneStep(input: List[Int], base: List[Int]): List[Int] = {
+    (for (i <- Range(0, input.length)) yield {
+      val pattern = base.flatMap(x => List.fill(i + 1)(x))
+      val pat: LazyList[Int] = LazyList.continually(pattern).flatten //LazyList.from(pattern)#::pat
+      (pat.drop(1).zip(input).map(e => e._1 * e._2).sum % 10).abs.toInt
+    }).toList
+  }
+
+  val offset = raw.take(7).toInt
+
+  val temp = oneStep(smallInput, base)
+  oneStep(temp, base)
+  val result = Iterator.iterate(input)(x => oneStep(x, base)).drop(100).next
+
+}

@@ -1,3 +1,1 @@
-object day13{
-    
-}
+object day13 {}

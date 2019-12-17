@@ -1,7 +1,5 @@
-
-
 object day6 {
-    val input = """D5Q)KRQ
+  val input = """D5Q)KRQ
     SDF)J68
     Y1M)LWN
     7GL)Z6T
@@ -1251,8 +1249,8 @@ object day6 {
     S7L)2TK
     K5V)Y3T
     HLY)3Z3"""
-    
-    val small = """COM)B
+
+  val small = """COM)B
     B)C
     C)D
     D)E
@@ -1264,53 +1262,69 @@ object day6 {
     J)K
     K)L"""
 
+  val orbits = input.split("\\n").map(_.trim()).sorted
 
+  class orbit(raw: String) {
+    val center: String = "test"
+  }
 
+  def convert(input: String): Map[String, List[String]] = {
     val orbits = input.split("\\n").map(_.trim()).sorted
-    
-    class orbit(raw:String){
-        val center:String = "test"
+
+    var orbitMap = scala.collection.mutable.Map.empty[String, List[String]]
+    for (orb <- orbits) {
+      val temp = orb.split("\\)")
+      if (orbitMap contains temp(0))
+        orbitMap(temp(0)) = temp(1) :: orbitMap(temp(0))
+      else orbitMap(temp(0)) = List(temp(1))
     }
-    
-    def convert(input:String):Map[String, List[String]]={
-        val orbits = input.split("\\n").map(_.trim()).sorted
+    return orbitMap.toMap
+  }
 
-        var orbitMap = scala.collection.mutable.Map.empty[String, List[String]]
-        for (orb <- orbits) {
-            val temp = orb.split("\\)")
-            if (orbitMap contains temp(0)) orbitMap(temp(0)) = temp(1) :: orbitMap(temp(0)) else orbitMap(temp(0)) = List(temp(1))
-        }
-        return orbitMap.toMap
-    }
+  val orbitMap = convert(input)
+  val smallOrbitMap = convert(small)
 
-    val orbitMap = convert(input)
-    val smallOrbitMap = convert(small)
+  def orbitCounter(root: String, orbitMap: Map[String, List[String]]): Int = {
+    if (!(orbitMap contains (root))) 0
+    else
+      orbitMap(root)
+        .map(e => orbitCounter(e, orbitMap))
+        .reduce(_ + _) + orbitMap(root).length
+  }
 
-    def orbitCounter(root:String, orbitMap:Map[String, List[String]]):Int={
-        if (!(orbitMap contains(root))) 0 else
-        orbitMap(root).map(e=>orbitCounter(e, orbitMap)).reduce(_+_) +orbitMap(root).length
-    }
+  orbitCounter("E", smallOrbitMap)
+  smallOrbitMap.keys.toList.map(e => orbitCounter(e, smallOrbitMap))
+  orbitMap.keys.toList.map(e => orbitCounter(e, orbitMap)).reduce(_ + _)
+  smallOrbitMap.keys.getClass()
 
-    orbitCounter("E", smallOrbitMap)
-    smallOrbitMap.keys.toList.map(e=>orbitCounter(e, smallOrbitMap))
-    orbitMap.keys.toList.map(e=>orbitCounter(e, orbitMap)).reduce(_+_)
-    smallOrbitMap.keys.getClass()
+  orbitMap.find(_._2.contains("YOU")).get._1
+  orbitMap.filter(_._2.contains("YOU")).keys.head
 
-    orbitMap.find(_._2.contains("YOU")).get._1
-    orbitMap.filter(_._2.contains("YOU")).keys.head
+  def getParent(
+      current: String,
+      orbitMap: Map[String, List[String]],
+      root: String = "COM"
+  ): List[String] = {
+    val parent = orbitMap.find(_._2.contains(current)).get._1
+    if (parent == root) List(root)
+    else parent :: getParent(parent, orbitMap, root)
+  }
 
-    def getParent(current:String, orbitMap:Map[String, List[String]], root:String="COM"):List[String]={
-        val parent = orbitMap.find(_._2.contains(current)).get._1
-        if (parent==root) List(root) else parent::getParent(parent, orbitMap, root)
-    }
+  def distance(
+      first: String,
+      second: String,
+      orbitMap: Map[String, List[String]]
+  ): Int = {
+    val firstancestry = getParent(first, orbitMap)
+    val secondancestry = getParent(second, orbitMap)
+    val crossing = firstancestry.intersect(secondancestry).head
+    getParent(first, orbitMap, crossing).size + getParent(
+      second,
+      orbitMap,
+      crossing
+    ).size - 2
+  }
 
-    def distance(first:String, second:String, orbitMap:Map[String, List[String]]):Int={
-        val firstancestry = getParent(first, orbitMap)
-        val secondancestry = getParent(second, orbitMap)
-        val crossing = firstancestry.intersect(secondancestry).head
-        getParent(first, orbitMap, crossing).size +getParent(second, orbitMap, crossing).size -2
-    }
-
-    distance("YOU", "SAN", orbitMap)
+  distance("YOU", "SAN", orbitMap)
 
 }

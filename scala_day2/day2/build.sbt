@@ -20,10 +20,9 @@ version := "1.0"
 // mostly only necessary if you intend to publish your library's binaries on a
 // place like Sonatype or Bintray.
 
-
 // Want to use a published library in your project?
 // You can define other libraries as dependencies in your build like this:
-libraryDependencies += "org.typelevel" %% "cats-core" % "2.0.0"
+libraryDependencies += "org.typelevel"   %% "cats-core"  % "2.0.0"
 libraryDependencies += "org.scala-graph" %% "graph-core" % "1.13.1"
 // Here, `libraryDependencies` is a set of dependencies, and by using `+=`,
 // we're adding the cats dependency to the set of dependencies that sbt will go
@@ -75,15 +74,15 @@ libraryDependencies += "org.scala-graph" %% "graph-core" % "1.13.1"
 // documentation at http://www.scala-sbt.org/documentation.html
 
 libraryDependencies += {
-    val version = scalaBinaryVersion.value match {
-      case "2.10" => "1.0.3"
-      case _ ⇒ "1.8.2"
-    }
-    "com.lihaoyi" % "ammonite" % version % "test" cross CrossVersion.full
+  val version = scalaBinaryVersion.value match {
+    case "2.10" => "1.0.3"
+    case _      ⇒ "1.8.2"
   }
-  
-  sourceGenerators in Test += Def.task {
-    val file = (sourceManaged in Test).value / "amm.scala"
-    IO.write(file, """object amm extends App { ammonite.Main.main(args) }""")
-    Seq(file)
-  }.taskValue
+  "com.lihaoyi" % "ammonite" % version % "test" cross CrossVersion.full
+}
+
+sourceGenerators in Test += Def.task {
+  val file = (sourceManaged in Test).value / "amm.scala"
+  IO.write(file, """object amm extends App { ammonite.Main.main(args) }""")
+  Seq(file)
+}.taskValue
